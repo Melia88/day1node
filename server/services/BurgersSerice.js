@@ -8,7 +8,7 @@ class BurgersService{
     if(!value){
       throw new BadRequest("Invalid Id Casting Failed");
     }
-    fakeDb.burgers.filter(b => b.id !== id)
+    fakeDb.burgers = fakeDb.burgers.filter(b => b.id !== id)
   }
   create(newBurger) {
     newBurger.id = generateId()
